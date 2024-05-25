@@ -18,7 +18,7 @@ export const PostList = () => {
                         <div className="text-sm">
                             {item.body}
                         </div>
-                        <button className="bg-red-600 rounded-md p-1" onClick={()=> postCtx?.removePost(item.id)}>X</button>
+                        <button className="bg-red-600 rounded-md p-1" onClick={()=> postCtx.removePost(item.id)}>X</button>
                     </div>
                 ))
             }
