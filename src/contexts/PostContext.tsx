@@ -1,8 +1,6 @@
 import { Post } from "@/Types/Post";
 import { createContext, ReactNode, useState } from "react";
 
-
-
 type PostContextType = {
     posts: Post[];
     addPost: (title:string, body:string)=>void;
