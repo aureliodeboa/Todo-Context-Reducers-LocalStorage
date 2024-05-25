@@ -1,9 +1,12 @@
 import { PostContext } from "@/contexts/PostContext";
-import { useContext } from "react";
+import { postReducers } from "@/reducers/postReducers";
+import { useContext, useReducer } from "react";
 
 export const PostList = () => {
     const postCtx = useContext(PostContext)
+    //const [posts,dispatch]= useReducer(postReducers,[])  
 
+    
     return(
         <div>
             {
@@ -15,6 +18,7 @@ export const PostList = () => {
                         <div className="text-sm">
                             {item.body}
                         </div>
+                        <button className="bg-red-600 rounded-md p-1" onClick={()=> postCtx?.removePost(item.id)}>X</button>
                     </div>
                 ))
             }
