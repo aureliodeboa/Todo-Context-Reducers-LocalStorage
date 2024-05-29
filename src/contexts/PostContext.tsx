@@ -16,7 +16,7 @@ export const PostProvider = ({children} : {children: ReactNode}) =>{
    //const [posts,setPosts]= useState<Post[]>([]); //usando o contexts
 
     const [posts,dispatch]= useReducer(postReducers,
-        JSON.parse(localStorage.getItem(STRING_KEY)|| '[]')
+        JSON.parse(localStorage.getItem(STRING_KEY) || '[]')
     ); // pega os dados como string do local storage e transforma em um vetor de itens, e se vier nulo coloca '[]'
 
     useEffect(()=>{
