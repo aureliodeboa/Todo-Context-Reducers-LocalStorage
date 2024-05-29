@@ -1,9 +1,7 @@
-import { PostContext } from "@/contexts/PostContext";
-import { postReducers } from "@/reducers/postReducers";
-import { useContext, useReducer } from "react";
+import { PostContext, usePosts } from "@/contexts/PostContext";
 
 export const PostList = () => {
-    const postCtx = useContext(PostContext)
+    const postCtx = usePosts()
     //const [posts,dispatch]= useReducer(postReducers,[])  
 
     

@@ -8,7 +8,7 @@ import { PostProvider } from "@/contexts/PostContext";
 const Page = () =>{
   return(
     <PostProvider>
-    <div className="mx-3">
+    <div className="mx-3 my-3">
       <Header>
       </Header>
       <PostList/>
